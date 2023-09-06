@@ -3,15 +3,30 @@ import './App.css';
 import Header from './Components/Header/Header';
 import { useEffect, useState } from 'react';
 import AnimeShop from './Components/AnimeShop/AnimeShop';
+import { click } from '@testing-library/user-event/dist/click';
 
 function App() {
+  let appInputSearchValue;
+  const appSearchBtn = () => {
+    // console.log("clicked");
+    // appInputSearchValue = document.getElementById("app-input-search-field").value;
+    // console.log(appInputSearchValue)
+  }
+
+
   const [animes, setAnimes] = useState([]);
   useEffect(() => {
-    fetch("https://api.jikan.moe/v4/anime?q=&sfw")
+    // let url = 'https://api.jikan.moe/v4/anime?q=' + { appInputSearchValue } + '&sfw';
+
+    fetch(`https://api.jikan.moe/v4/anime?q=&sfw`)
       .then(res => res.json())
       .then(data => setAnimes(data.data));
   }, []);
-  console.log(animes);
+  // console.log(animes);
+
+
+
+
 
 
   return (
@@ -32,8 +47,8 @@ function App() {
       </header> */}
       <Header></Header>
       <div>
-        <input type="text" placeholder='Anime name...' />
-        <button>Search</button>
+        <input id="app-input-search-field" type="text" placeholder='Anime name...' />
+        <button onClick={() => appSearchBtn()}>Search</button>
       </div>
       <AnimeShop animes={animes}></AnimeShop>
     </div>

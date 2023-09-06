@@ -1,4 +1,5 @@
 import React from 'react';
+import "./AnimeShop.css"
 import AnimeShopList from '../AnimeShopList/AnimeShopList';
 import AnimeShopCart from '../AnimeShopCart/AnimeShopCart';
 

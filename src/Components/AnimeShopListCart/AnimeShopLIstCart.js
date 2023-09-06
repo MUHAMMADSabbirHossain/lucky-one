@@ -2,23 +2,22 @@ import React from 'react';
 import "./AnimeShopListCart.css";
 
 const AnimeShopLIstCart = ({ anime }) => {
-    console.log(anime);
+    // console.log(anime);
     // console.log(anime.images.jpg.image_url);
 
     return (
         <div>
             <div>
-                <h5>{anime.title}</h5>
+                <h3>{anime.title}</h3>
             </div>
             <img src={anime.images.jpg.image_url} alt="" />
             <div>
                 <p>Score: {anime.score}</p>
-                <p>Score: {anime.type}</p>
-                <p>Score: {anime.rating}</p>
-                <p>Score: {anime.duration}</p>
-                <p>Score: {anime.duration}</p>
-                <p>Score: {anime.episodes}</p>
-                <p>Score: {anime.background}</p>
+                <p>Type: {anime.type}</p>
+                <p>Rating: {anime.rating}</p>
+                <p>Episodes: {anime.episodes}</p>
+                <p>Duration: {anime.duration}</p>
+                {/* <p>Score: {anime.background}</p> */}
             </div>
         </div>
     );
