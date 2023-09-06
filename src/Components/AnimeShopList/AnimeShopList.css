@@ -3,3 +3,15 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
 }
+
+@media screen and (max-width: 400px) {
+    #anime-shop-list-carts {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (min-width: 401px) and (max-width: 1000px) {
+    #anime-shop-list-carts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
