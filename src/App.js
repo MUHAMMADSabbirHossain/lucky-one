@@ -24,8 +24,15 @@ function App() {
   }, []);
   // console.log(animes);
 
+  const [watchLaterAnimes, setWatchLaterAnime] = useState([]);
 
-
+  const addToWatchLaterBtn = (selectedAnime) => {
+    // console.log(selectedAnime);
+    // console.log(...watchLaterAnimes);
+    const newArray = [...watchLaterAnimes, selectedAnime];
+    // console.log(newArray);
+    setWatchLaterAnime(newArray);
+  }
 
 
 
@@ -50,7 +57,7 @@ function App() {
         <input id="app-input-search-field" type="text" placeholder='Anime name...' />
         <button onClick={() => appSearchBtn()}>Search</button>
       </div>
-      <AnimeShop animes={animes}></AnimeShop>
+      <AnimeShop animes={animes} addToWatchLaterBtn={addToWatchLaterBtn} watchLaterAnimes={watchLaterAnimes}></AnimeShop>
     </div>
   );
 }

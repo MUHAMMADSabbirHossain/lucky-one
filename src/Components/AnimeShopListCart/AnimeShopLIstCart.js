@@ -1,7 +1,7 @@
 import React from 'react';
 import "./AnimeShopListCart.css";
 
-const AnimeShopLIstCart = ({ anime }) => {
+const AnimeShopLIstCart = ({ anime, addToWatchLaterBtn }) => {
     // console.log(anime);
     // console.log(anime.images.jpg.image_url);
 
@@ -18,6 +18,10 @@ const AnimeShopLIstCart = ({ anime }) => {
                 <p>Episodes: {anime.episodes}</p>
                 <p>Duration: {anime.duration}</p>
                 <p className='anime-shop-list-cart-detail'>Score: {anime.background}</p>
+                <a href="">
+                    <button>Watch now</button>
+                </a>
+                <button onClick={() => addToWatchLaterBtn({ anime })}>Add to Watch Later</button>
             </div>
         </div>
     );
