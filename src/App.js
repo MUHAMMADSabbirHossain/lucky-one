@@ -31,6 +31,10 @@ function App() {
         </a>
       </header> */}
       <Header></Header>
+      <div>
+        <input type="text" placeholder='Anime name...' />
+        <button>Search</button>
+      </div>
       <AnimeShop animes={animes}></AnimeShop>
     </div>
   );
