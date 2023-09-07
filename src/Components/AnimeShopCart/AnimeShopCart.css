@@ -7,3 +7,8 @@
     position: sticky;
     top: 0;
 }
+
+#app-shop-cart-watch-later-item {
+    display: flex;
+    flex-wrap: wrap;
+}

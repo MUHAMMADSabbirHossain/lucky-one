@@ -10,12 +10,12 @@ const AnimeShopCart = ({ watchLaterAnimes }) => {
                 <h2>Watch Summary</h2>
                 <h5></h5>
                 <h2>Watch Later Item: {watchLaterAnimes.length}</h2>
-                <div style={{ display: "flex" }}>
+                <div id='app-shop-cart-watch-later-item'>
                     {
                         watchLaterAnimes.map(watchLaterAnime => {
                             return (
                                 <div >
-                                    <p>{watchLaterAnime.anime.title}</p>
+                                    <p><small>{watchLaterAnime.anime.title}</small></p>
                                     <img src={watchLaterAnime.anime.images.jpg.image_url} alt="" width="50px" />
                                 </div>
                             )

@@ -27,11 +27,28 @@ function App() {
   const [watchLaterAnimes, setWatchLaterAnime] = useState([]);
 
   const addToWatchLaterBtn = (selectedAnime) => {
-    // console.log(selectedAnime);
+    // console.log(selectedAnime.anime.mal_id);
     // console.log(...watchLaterAnimes);
-    const newArray = [...watchLaterAnimes, selectedAnime];
+    // console.log(watchLaterAnimes[0].anime.mal_id);
+    let exists = watchLaterAnimes.find(watchLaterAnime =>
+      watchLaterAnime.anime.mal_id === selectedAnime.anime.mal_id
+    );
+    // console.log(exists);
+
+    let newArray = [];
+    if (exists) {
+      console.log("defined", exists);
+
+    } else {
+      console.log("undefined", exists);
+      newArray = [...watchLaterAnimes, selectedAnime];
+      setWatchLaterAnime(newArray);
+
+    }
+
+
     // console.log(newArray);
-    setWatchLaterAnime(newArray);
+
   }
 
 
